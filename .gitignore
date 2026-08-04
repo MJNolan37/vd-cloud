@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Environments
+.env
+.venv
+env/
+venv/
+*.egg-info/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local data / caches (none tracked by design, but guard against accidental drops)
+data/
+*.cache
