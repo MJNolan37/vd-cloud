@@ -1,0 +1,14 @@
+variant,regime,horizon,bucket_n,empirical_p,hac_t_stat,circular_shift_p,robustness_verdict
+volatility_only,above_cloud,21,967,0.000999000999000999,1.489921191390338,0.11188811188811189,permutation-interesting but HAC-weak
+volatility_only,above_cloud,63,945,0.03596403596403597,0.5757596490920681,0.5104895104895105,permutation-interesting but HAC-weak
+penalty,below_cloud,21,1190,0.04695304695304695,1.0490382801568232,0.4325674325674326,permutation-interesting but HAC-weak
+penalty,below_cloud,63,1159,0.03796203796203796,1.1120769608259482,0.3646353646353646,permutation-interesting but HAC-weak
+additive,above_cloud,21,884,0.001998001998001998,1.26813730191433,0.22777222777222778,permutation-interesting but HAC-weak
+additive,above_cloud,63,876,0.002997002997002997,1.0691197743725678,0.3096903096903097,permutation-interesting but HAC-weak
+dispersion_only,below_cloud,21,1340,0.3866133866133866,0.4322600414499936,0.6523476523476524,weak / likely noise
+dispersion_only,below_cloud,63,1312,0.8001998001998002,0.13290319414969656,0.9050949050949051,weak / likely noise
+volatility_only,inside_cloud,21,571,0.006993006993006993,-1.288735333451576,0.23376623376623376,permutation-interesting but HAC-weak
+additive,inside_cloud,21,530,0.003996003996003996,-1.7321781033964871,0.16083916083916083,survives initial robustness
+dispersion_only,above_cloud,21,836,0.5814185814185814,-0.23984775126152805,0.7442557442557443,weak / likely noise
+penalty,above_cloud,21,929,0.15084915084915085,-0.7408830631189586,0.5164835164835165,weak / likely noise
+volatility_only,below_cloud,21,1108,0.008991008991008992,-0.9135481302115538,0.3956043956043956,permutation-interesting but HAC-weak

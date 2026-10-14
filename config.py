@@ -1,9 +1,7 @@
 # =============================================================================
 # V&D Cloud — Configuration
 # =============================================================================
-# Clean-room boundary: this project uses public market data only (via yfinance).
-# It does not reference, rely on, or reproduce any proprietary employer systems,
-# employer data, internal tools, or internal methodology of any kind.
+# Data: public daily adjusted prices via yfinance.
 # =============================================================================
 
 # --- Date Range --------------------------------------------------------------
@@ -58,6 +56,7 @@ MIN_BUCKET_N = 30                    # Minimum sample size for a regime bucket t
 HAC_TSTAT_THRESHOLD = 1.65           # Heuristic significance bar used throughout
 PERMUTATION_TWO_SIDED_P = 0.10       # Random-label permutation interest threshold
 
-# Chronological holdout split used in Phase 2B
+# Retrospective chronological comparison in Phase 2B. Outcome endpoints must stay
+# within the earlier period; rolling features may carry prior history forward.
 IN_SAMPLE_END = "2020-12-31"
 HOLDOUT_START = "2021-01-01"

@@ -1,0 +1,7 @@
+regime_name,regime_state,run_count,mean_duration,median_duration
+additive,above_cloud,122,6.647540983606557,5.0
+additive,below_cloud,146,8.821917808219178,6.0
+additive,inside_cloud,200,2.84,2.0
+penalty,above_cloud,148,5.878378378378378,5.0
+penalty,below_cloud,156,7.801282051282051,5.0
+penalty,inside_cloud,236,2.457627118644068,2.0

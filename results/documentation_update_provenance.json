@@ -1,0 +1,56 @@
+{
+  "status": "verified_evidence_and_documentation_updated",
+  "run_date_local": "2026-10-13",
+  "timezone": "America/Los_Angeles",
+  "tests_passed": 22,
+  "tests_skipped": 0,
+  "output_hashes_verified": 27,
+  "online_offline_hashes_identical": true,
+  "invariants": "pass",
+  "figures_visually_reviewed": 5,
+  "source_sha256_at_execution": {
+    "atlas/atlas_observatory.ipynb": "c02e4cb60adcf41496f35ee3ce947093a25ed7b5db122ad3c09f5d335775945d",
+    "config.py": "a21d7864ef3e45f847d2db5deb11af6f6d16ccb86b0248bc38a637ab4a4decf5",
+    "notebooks/01_qqq_prototype_clean.ipynb": "e7286ae315da9056df58b8de1a88209cb5f58f684144cb65eecb801bcc24d7f2",
+    "notebooks/02_cross_market_validation_clean.ipynb": "3440658471b5def4e69a01168dbe3ce11378fd32dc36f6d1d61932d929fd0a6f",
+    "notebooks/03_temporal_holdout_clean.ipynb": "db034efc6076d17fcf5df13cd708727b1ee2325b4d638204db730dab9f70dd0f",
+    "scripts/check_invariants.py": "1786277ca750d5794dd80450b0e77775352bf4da1676ba6436592975db7bf22f",
+    "scripts/null_calibration.py": "fc37c5096a9e4aef81feee89eae22ea424a6836275a54e921c4a98bc5b839d4e",
+    "scripts/reproduce.py": "3f3283c46ebf02e6a802f075a1a942b723d25aee3bebc99a4672ab53d53083d1",
+    "src/__init__.py": "ed27386792811a8961d7ffb3b70bf6a11bf34f13f080180a3762f7dc4d205c39",
+    "src/repro.py": "9fbf0bba9b089192e444243da07c967f6a4c3f20b811e2d80a76de06b47cf1fd",
+    "src/vdcloud.py": "9a8d9aa93f70379278f72a6e9b0d99e126bb440d1ce48b68f60d383b43189bd0"
+  },
+  "notebook_documentation_updates": {
+    "notebooks/01_qqq_prototype_clean.ipynb": {
+      "executed_file_sha256": "e7286ae315da9056df58b8de1a88209cb5f58f684144cb65eecb801bcc24d7f2",
+      "final_file_sha256": "7d13c192191fd622d7006d3b40cbbd883135e2c368127d683489dbfbe17d2228",
+      "executable_cells_sha256": "5883c80f21ed5f08dc10cc5a869f5bff9d30d2cf3f08f34f7066e062acb2bdad",
+      "code_cells_unchanged": true
+    },
+    "notebooks/02_cross_market_validation_clean.ipynb": {
+      "executed_file_sha256": "3440658471b5def4e69a01168dbe3ce11378fd32dc36f6d1d61932d929fd0a6f",
+      "final_file_sha256": "2e7b133136899540e190f91d9ba36f7d4f7a26a7e89de59db89e37806838664b",
+      "executable_cells_sha256": "61e60b4605f67360961bd70054daab3b83ced63431b5029caa854bd2a62ea066",
+      "code_cells_unchanged": true
+    },
+    "notebooks/03_temporal_holdout_clean.ipynb": {
+      "executed_file_sha256": "db034efc6076d17fcf5df13cd708727b1ee2325b4d638204db730dab9f70dd0f",
+      "final_file_sha256": "d6d016a3674f9cff4a0cd11dea17b1ec1c375902840b7a61c3f55d06424e8130",
+      "executable_cells_sha256": "a4f9f1090e7a04622200fa07773465a9481325aef20ee7cd184a89b19ddba751",
+      "code_cells_unchanged": true
+    },
+    "atlas/atlas_observatory.ipynb": {
+      "executed_file_sha256": "c02e4cb60adcf41496f35ee3ce947093a25ed7b5db122ad3c09f5d335775945d",
+      "final_file_sha256": "a394bf6155a229433e430902a19f85ac53b7f1061d80fc10e83d1695ce7735f2",
+      "executable_cells_sha256": "8208365c9712ce0f3f72ebb993263ba9299f8f8214fba01f4e60be4ef00a7985",
+      "code_cells_unchanged": false,
+      "data_calculation_cells_unchanged": true,
+      "changed_presentation_cells": [
+        6,
+        8
+      ]
+    }
+  },
+  "atlas_visual_review": "Awaiting user review of the revised local HTML; browser policy prevents agent local-file preview."
+}

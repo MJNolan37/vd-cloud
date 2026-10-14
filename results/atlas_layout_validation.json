@@ -1,0 +1,22 @@
+{
+  "scope": "Atlas presentation only; existing verified calculations retained",
+  "latest_market_observation": "2026-10-13",
+  "tests_passed": 28,
+  "tests_skipped": 0,
+  "metrics_sha256": "2e7ea015562461519be3c30987244866955dde1ad18f2f7edb1a7e440dcf8e9f",
+  "metrics_match_verified_run": true,
+  "html_sha256": "f6a1dd24053cab41aafcade4955bc6e3c5850b805f1eca3e62cc0ba9498f2069",
+  "renderer_sha256": "efd29d17f0411a1596988d51eeb2ea18dcb80028e1c57b5438235b4de56b43e7",
+  "snapshot_metadata": {
+    "fingerprint": "94efc747d38d59dc86d0506307dd8452be9242b38c345cb655d5f213ffa0f02a",
+    "generated_at_utc": "2026-10-14T05:59:21.841233+00:00",
+    "latest_market_observation": "2026-10-13",
+    "timezone": "America/Los_Angeles",
+    "data_mode": "daily_snapshot_manual_refresh"
+  },
+  "byte_identical_presentation_replay": true,
+  "research_calculations_unchanged": true,
+  "date_control_logic_test": "Passed: shipped JavaScript resizes x/y ranges for all four time series and resets all six charts; browser rendering separately reviewed by C-Zephy on the precursor page.",
+  "visual_review": "Awaiting user preview at 100% browser zoom",
+  "notes": "Prior empirical run manifest remains preserved and describes the pre-layout-update HTML."
+}

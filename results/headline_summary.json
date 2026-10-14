@@ -1,0 +1,180 @@
+{
+  "selected_buckets": 13,
+  "shuffle_interesting": 9,
+  "hac_interesting": 1,
+  "circular_shift_interesting": 0,
+  "shuffle_and_hac": 1,
+  "phase2_buckets": [
+    {
+      "variant": "volatility_only",
+      "regime": "above_cloud",
+      "horizon": 21,
+      "bucket_n": 967,
+      "empirical_p": 0.000999001,
+      "hac_t_stat": 1.4899211914,
+      "circular_shift_p": 0.1118881119,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "volatility_only",
+      "regime": "above_cloud",
+      "horizon": 63,
+      "bucket_n": 945,
+      "empirical_p": 0.035964036,
+      "hac_t_stat": 0.5757596491,
+      "circular_shift_p": 0.5104895105,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "penalty",
+      "regime": "below_cloud",
+      "horizon": 21,
+      "bucket_n": 1190,
+      "empirical_p": 0.046953047,
+      "hac_t_stat": 1.0490382802,
+      "circular_shift_p": 0.4325674326,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "penalty",
+      "regime": "below_cloud",
+      "horizon": 63,
+      "bucket_n": 1159,
+      "empirical_p": 0.037962038,
+      "hac_t_stat": 1.1120769608,
+      "circular_shift_p": 0.3646353646,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "additive",
+      "regime": "above_cloud",
+      "horizon": 21,
+      "bucket_n": 884,
+      "empirical_p": 0.001998002,
+      "hac_t_stat": 1.2681373019,
+      "circular_shift_p": 0.2277722278,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "additive",
+      "regime": "above_cloud",
+      "horizon": 63,
+      "bucket_n": 876,
+      "empirical_p": 0.002997003,
+      "hac_t_stat": 1.0691197744,
+      "circular_shift_p": 0.3096903097,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "dispersion_only",
+      "regime": "below_cloud",
+      "horizon": 21,
+      "bucket_n": 1340,
+      "empirical_p": 0.3866133866,
+      "hac_t_stat": 0.4322600414,
+      "circular_shift_p": 0.6523476523,
+      "robustness_verdict": "weak / likely noise"
+    },
+    {
+      "variant": "dispersion_only",
+      "regime": "below_cloud",
+      "horizon": 63,
+      "bucket_n": 1312,
+      "empirical_p": 0.8001998002,
+      "hac_t_stat": 0.1329031941,
+      "circular_shift_p": 0.9050949051,
+      "robustness_verdict": "weak / likely noise"
+    },
+    {
+      "variant": "volatility_only",
+      "regime": "inside_cloud",
+      "horizon": 21,
+      "bucket_n": 571,
+      "empirical_p": 0.006993007,
+      "hac_t_stat": -1.2887353335,
+      "circular_shift_p": 0.2337662338,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    },
+    {
+      "variant": "additive",
+      "regime": "inside_cloud",
+      "horizon": 21,
+      "bucket_n": 530,
+      "empirical_p": 0.003996004,
+      "hac_t_stat": -1.7321781034,
+      "circular_shift_p": 0.1608391608,
+      "robustness_verdict": "survives initial robustness"
+    },
+    {
+      "variant": "dispersion_only",
+      "regime": "above_cloud",
+      "horizon": 21,
+      "bucket_n": 836,
+      "empirical_p": 0.5814185814,
+      "hac_t_stat": -0.2398477513,
+      "circular_shift_p": 0.7442557443,
+      "robustness_verdict": "weak / likely noise"
+    },
+    {
+      "variant": "penalty",
+      "regime": "above_cloud",
+      "horizon": 21,
+      "bucket_n": 929,
+      "empirical_p": 0.1508491508,
+      "hac_t_stat": -0.7408830631,
+      "circular_shift_p": 0.5164835165,
+      "robustness_verdict": "weak / likely noise"
+    },
+    {
+      "variant": "volatility_only",
+      "regime": "below_cloud",
+      "horizon": 21,
+      "bucket_n": 1108,
+      "empirical_p": 0.008991009,
+      "hac_t_stat": -0.9135481302,
+      "circular_shift_p": 0.3956043956,
+      "robustness_verdict": "permutation-interesting but HAC-weak"
+    }
+  ],
+  "holdout_named_regimes": {
+    "sign_flipped": 28,
+    "consistent": 11,
+    "directionally_consistent_but_weaker": 5,
+    "low_n": 4
+  },
+  "holdout_named_regimes_by_source": {
+    "confirmed_5d": {
+      "sign_flipped": 12,
+      "consistent": 5,
+      "low_n": 4,
+      "directionally_consistent_but_weaker": 3
+    },
+    "raw": {
+      "sign_flipped": 16,
+      "consistent": 6,
+      "directionally_consistent_but_weaker": 2
+    }
+  },
+  "holdout_unconfirmed": {
+    "sign_flipped": 7,
+    "directionally_consistent_but_weaker": 1
+  },
+  "persistence_preference_counts": {
+    "raw": 6,
+    "confirmed_5d": 4,
+    "neither": 11,
+    "inconclusive": 3
+  },
+  "baseline_spread_21d": {
+    "dispersion_quartile": 0.0057834129596885265,
+    "drawdown_bucket": 0.026365549805123643,
+    "efa_trend_state": 3.0088604724226586e-05,
+    "realized_vol_quartile": 0.02016160122616241
+  },
+  "vd_spread_21d": {
+    "additive": 0.00954296295528883,
+    "penalty": 0.0037054977686466224,
+    "dispersion_only": 0.0017510132616138582,
+    "volatility_only": 0.010773532246215849
+  }
+}

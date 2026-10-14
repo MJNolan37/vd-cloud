@@ -1,0 +1,15 @@
+{
+  "status": "archived_previous_implementation_not_revised_validation",
+  "source_commit": "716db05d57f1d097b9d8fe853fc36e148aba4d69",
+  "source": "Saved outputs in notebooks 02 cell 22 and 03 cell 12",
+  "price_last_date": "2026-05-29",
+  "phase2_selected_buckets": 13,
+  "phase2_shuffle_interesting": 9,
+  "phase2_shuffle_and_hac": 1,
+  "phase2_survivor": {"variant": "additive", "regime": "inside_cloud", "horizon": 21, "hac_t_stat": -1.732182},
+  "phase2b_cells": 56,
+  "phase2b_includes_unconfirmed_cells": 8,
+  "phase2b_flags": {"sign_flipped": 31, "consistent": 14, "directionally_consistent_but_weaker": 7, "low_n": 4},
+  "atlas_last_observation": "2026-08-03",
+  "caveat": "Previous missing-data defaults, premature Phase1 labels, and split-crossing outcomes require a revised run. Raw archived data was not stored; exact reconstruction is not asserted."
+}

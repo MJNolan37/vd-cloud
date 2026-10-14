@@ -1,0 +1,6 @@
+Reviewer-supplied illustrative simulation; not a calibration of selected real-data bucket counts.
+Share of 200 no-information replications with p <= 0.10 (nominal 0.10):
+         shuffle_false_positive_rate  circular_shift_false_positive_rate
+horizon
+21                             0.700                               0.095
+63                             0.785                               0.115

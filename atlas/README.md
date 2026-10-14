@@ -1,25 +1,47 @@
-# Atlas Observatory v0.1
+# Atlas Observatory
 
-An interactive, single-ticker volatility & dispersion monitoring dashboard (TQQQ vs. QQQ) — a lighter-weight, later branch of the [V&D Cloud](../README.md) research, extending it from a fixed research question into day-to-day instrumentation.
+A descriptive TQQQ / QQQ monitor, extending the [V&D Cloud](../README.md) research into rolling metrics and provisional threshold labels.
 
-**[Open the live dashboard](index.html)** — a self-contained HTML file, no install or server required.
+The committed [`index.html`](index.html) is a **verified snapshot, latest observation 2026-10-13**, from the revised implementation. Download and open locally. It embeds the plotting library and needs no server; it does not refresh automatically. GitHub's file view is not a rendered dashboard.
 
-## What it shows
+## Metrics and Interpretation
 
-- Normalized price, 20-day realized volatility, and a simple dispersion proxy (`1 - rolling correlation vs. QQQ`)
-- A volatility × dispersion heatmap of how often TQQQ has spent time in each combined state
-- A "state path" scatter tracing volatility/dispersion through time
-- Rolling volume
-- A provisional rule-based zone label (`Turbulent / Fragmented`, `Reactive`, `Unstable Transition`, `Balanced / Risk-On`)
+- Adjusted price normalized to the prior year's final available close, and current-year return from that close.
+- 20-day annualized realized volatility.
+- Pairwise correlation distance (`1 - rolling correlation` versus QQQ), distinct from cross-sectional dispersion.
+- Volatility × correlation-distance state frequencies and a chronological state path.
+- Rolling volume and descriptive high/lower-volatility, high/low-correlation-distance labels.
 
-**These zone labels are explicitly provisional and rule-based — not a validated regime model, and not a trading signal.** They exist to demonstrate the jump from "research finding" to "usable monitoring instrument," not to make a forecasting claim.
+Public daily adjusted prices and volume come via `yfinance`. TQQQ's daily-reset leverage makes its return correlation with QQQ very close to one. Changes in this small proxy do not demonstrate market fragmentation or a trading opportunity. Zones have no predictive validation.
 
-**Calibration note.** Dispersion is bucketed by **quartile of the observed pair's own distribution**, not a fixed absolute threshold — applied consistently to the heatmap buckets and the zone classifier. TQQQ tracks QQQ so tightly via daily-reset leverage that its raw dispersion sits orders of magnitude below what a fixed universal cutoff would assume, which would otherwise make three of the four dispersion buckets — and two of the four zones — permanently unreachable. "High dispersion" here means high relative to how this specific pair has behaved recently, not a fixed absolute level.
+The revised calculation uses expanding quartiles from observations strictly **before each labeled date**, with at least 20 valid proxy observations in the displayed year. Ties can leave buckets empty. Initial states are uncalibrated; heatmap percentages cover calibrated observations only. Fixed volatility heatmap bands (Low up to and including 40%; Medium above 40% to 70%; High above 70% to 100%; Very High above 100%) differ from the state's 80% split; these are visualization choices, not learned thresholds. The header shows the full calculated state (for example, “Lower volatility · low correlation distance”) with its rule. Because distance cutoffs come from earlier days, the heatmap's distance columns need not hold 25% of days each.
 
-## Reproducing it
+## Reproducing the Revised Snapshot
 
-Unlike the main V&D Cloud notebooks (which are pinned to a fixed historical analysis window on purpose — see the [main README](../README.md#clean-room-boundary)), this notebook is meant to be **re-run for a current read**: `start_date` is year-to-date and `end_date` defaults to latest available. Run `atlas_observatory.ipynb` top-to-bottom to regenerate `index.html` with today's data.
+On Windows/Python 3.12, install [`requirements-lock-windows-py312.txt`](../requirements-lock-windows-py312.txt) in an isolated environment. Other platforms may use [`requirements.txt`](../requirements.txt); their full environments are not validated by this run. From the repository root:
 
-## Clean-Room Boundary
+```powershell
+python scripts/reproduce.py --atlas
+```
 
-Public market data only, via `yfinance`. No proprietary employer systems, employer data, internal tools, or internal methodology are referenced or reproduced anywhere in this notebook.
+Alternatively execute `atlas_observatory.ipynb` top-to-bottom. The year is calculated at execution time; pre-year data provides rolling-window warm-up. The output path is explicitly `atlas/index.html`, regardless of working directory. The research notebooks use fixed dates in [`config.py`](../config.py).
+
+The downloader caches CSVs with hashes. Use `--refresh --atlas` for new responses or `--offline --atlas` to require matching cached data. A cache from another year cannot satisfy a current-year request. The metric table was verified in the October 13, 2026 run. This HTML was subsequently regenerated from that same table with the revised layout; repeated presentation renders are byte-identical. The original run manifest identifies the earlier HTML, while `results/atlas_layout_validation.json` identifies this presentation revision. Refreshing from Yahoo can change the data and should be followed by a new manifest and caption review.
+
+## Reading the Dashboard
+
+The initial layout is compact and responsive, with a separate header and short guides below each chart title. Volatility and correlation distance use independent time-series panels. The state chart shows faint earlier observations, a teal twenty-observation trail with exact dates on hover, and a white diamond for the latest observation. Its small correlation distances do not indicate leverage tracking error or broad market fragmentation.
+
+The time-series and state charts keep zoom and pan controls; the heatmap is fixed. Year-to-date / 90-day / 30-day buttons change only the four time-series charts, setting their date range and rescaling their vertical axes to the visible window; the heatmap and state chart always cover the year to date. Reset all charts restores the default view. Smaller screens stack the panels.
+
+To regenerate the presentation from the verified exported metrics without downloading data or rerunning research:
+
+```powershell
+python scripts/render_atlas.py
+```
+
+The footer states that the dashboard is a manually refreshed daily-data snapshot, not real-time quotes. It records the latest observation and generation time separately. Identical metrics and renderer versions reuse the original snapshot-generation time so offline replay remains deterministic. This timestamp is not the date of a fresh market-data download.
+
+The subtitle identifies TQQQ as the monitored instrument and QQQ as the return-alignment benchmark; every caption names TQQQ, and the correlation-distance, heatmap and state captions also name QQQ. The state chart uses categorical styling (gray history, teal recent trail, white latest diamond), with no date-gradient axis.
+
+Each chart guide explains its measurement and a concrete reading: price adjustment versus normalization, annualized variability versus investment return, correlation distance versus leverage tracking, heatmap percentages as shares of included days, the state trail as measured conditions rather than price direction, and volume in shares rather than dollars.
