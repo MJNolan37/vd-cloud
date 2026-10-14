@@ -1,0 +1,20 @@
+{
+  "scope": "GitHub Pages hosting, dashboard access, and self-study origin explanation",
+  "deployment_status": "Prepared locally; deployment must be confirmed by the publishing script",
+  "intended_site_url": "https://mjnolan37.github.io/vd-cloud/",
+  "dashboard_tests_passed": 6,
+  "dashboard_tests_skipped": 0,
+  "workflow_structure_checked": true,
+  "metrics_sha256": "2e7ea015562461519be3c30987244866955dde1ad18f2f7edb1a7e440dcf8e9f",
+  "research_calculations_unchanged": true,
+  "html_sha256": "c2e7251e7294b9830f6ba2069198030626628642bf9a147d520b83ebed3f6f5f",
+  "renderer_sha256": "8e28619b5fd244fd82432676bddf892ffb8c5ffd117a7f7a8c021f60b808df87",
+  "snapshot_metadata": {
+    "fingerprint": "852fd845f1ce3f012ee8125c72cc349f20d437d8b73b62921cdd593adfa14260",
+    "generated_at_utc": "2026-10-14T06:20:51.528828+00:00",
+    "latest_market_observation": "2026-10-13",
+    "timezone": "America/Los_Angeles",
+    "data_mode": "daily_snapshot_manual_refresh"
+  },
+  "notes": "Earlier empirical and presentation validation records describe their own historical outputs and are preserved."
+}

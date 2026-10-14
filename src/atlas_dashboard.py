@@ -110,6 +110,7 @@ CSS = """
 main{max-width:1480px;margin:0 auto;padding:18px 24px 14px}header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
 h1{font-size:22px;line-height:1.2;margin:0 0 5px;font-weight:600;letter-spacing:-.4px}.sub{color:var(--muted);margin:0;font-size:12px}
 .badge{border:1px solid #426d65;background:#15322e;color:#a8e0ca;padding:5px 9px;border-radius:18px;white-space:nowrap;font-size:11px}
+.origin{margin:9px 0;color:var(--muted);font-size:12px}.origin summary{cursor:pointer;color:#b5d8ef}.origin p{max-width:100ch;margin:7px 0}.origin a{color:#a8d4f3;text-underline-offset:3px}
 .readout{display:flex;flex-wrap:wrap;gap:12px 24px;padding:10px 0 8px}.readout span{color:var(--muted);font-size:11px}.readout strong{color:var(--text);margin-left:6px;font-size:13px;font-weight:500}
 .controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:0 0 10px}.controls .hint{color:var(--muted);font-size:11px;margin-left:7px}
 button{background:#1b293b;color:#dce7f4;border:1px solid #35475e;border-radius:5px;padding:4px 9px;font:11px Arial;cursor:pointer}
@@ -191,6 +192,10 @@ def render_dashboard(metrics, target, benchmark, ytd_return, output_path, snapsh
 <script>{get_plotlyjs()}</script></head><body><main>
 <header><div><h1>Atlas Observatory</h1><p class="sub">{escape(target)} monitoring · {escape(benchmark)} is the return-alignment benchmark</p></div>
 <span class="badge">Daily-data snapshot · Updated manually</span></header>
+<details class="origin"><summary>From self-study research to Atlas</summary>
+<p>Atlas grew out of V&amp;D Cloud, a self-study project exploring whether volatility and cross-sectional dispersion could support an Ichimoku-inspired market-regime framework. The research produced descriptive structure but did not establish predictive validity.</p>
+<p>Atlas carries that learning into a simpler monitoring dashboard: {escape(target)} is the instrument being observed, and {escape(benchmark)} is its return-alignment benchmark. Its pairwise correlation-distance measure differs from the country/stock cross-sectional dispersion used in the research.</p>
+<p><a href="https://github.com/MJNolan37/vd-cloud#research-question-and-motivation">Read the research story and methodology</a> · <a href="https://github.com/MJNolan37/vd-cloud#verified-revised-results">Explore the research findings</a></p></details>
 <div class="readout"><div><span>Latest observation</span><strong>{last_date}</strong></div>
 <div><span>YTD adjusted return</span><strong>{ytd_return:.1%}</strong></div>
 <div><span>20-day annualized volatility</span><strong>{latest.Realized_Vol:.1%}</strong></div>

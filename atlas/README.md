@@ -1,8 +1,10 @@
 # Atlas Observatory
 
-A descriptive TQQQ / QQQ monitor, extending the [V&D Cloud](../README.md) research into rolling metrics and provisional threshold labels.
+**[Open the Atlas dashboard →](https://mjnolan37.github.io/vd-cloud/)**
 
-The committed [`index.html`](index.html) is a **verified snapshot, latest observation 2026-10-13**, from the revised implementation. Download and open locally. It embeds the plotting library and needs no server; it does not refresh automatically. GitHub's file view is not a rendered dashboard.
+Atlas grew out of [V&D Cloud's self-study research](../README.md#research-question-and-motivation): learning volatility, cross-sectional dispersion, normalization and regime mapping by building a framework and challenging its apparent findings. That research did not establish predictive validity. Atlas applies the learning to descriptive monitoring, focusing on TQQQ with QQQ as its return-alignment benchmark. Its pairwise correlation-distance proxy differs from the research's stock/country cross-sectional dispersion.
+
+The hosted page serves the reviewed daily-data snapshot with latest observation **2026-10-13**. Opening it requires no installation; it does not refresh prices automatically. The saved [`index.html`](index.html) embeds its plotting library and can also be downloaded for offline viewing. GitHub's file view is not the dashboard; use the prominent hosted link above.
 
 ## Metrics and Interpretation
 
@@ -45,3 +47,7 @@ The footer states that the dashboard is a manually refreshed daily-data snapshot
 The subtitle identifies TQQQ as the monitored instrument and QQQ as the return-alignment benchmark; every caption names TQQQ, and the correlation-distance, heatmap and state captions also name QQQ. The state chart uses categorical styling (gray history, teal recent trail, white latest diamond), with no date-gradient axis.
 
 Each chart guide explains its measurement and a concrete reading: price adjustment versus normalization, annualized variability versus investment return, correlation distance versus leverage tracking, heatmap percentages as shares of included days, the state trail as measured conditions rather than price direction, and volume in shares rather than dollars.
+
+## Publishing the Browser View
+
+The `Publish Atlas dashboard` workflow serves `atlas/index.html` at the repository's GitHub Pages URL when that file changes on `main`. Pages uses the GitHub Actions publishing source. Hosting is automatic; market-data regeneration remains manual. The published artifact contains only the dashboard HTML, not cached raw market data or the full research repository.

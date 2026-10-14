@@ -5,6 +5,11 @@ A quantitative research project testing whether volatility and cross-sectional d
 
 **The revised analysis produced coherent descriptive regimes but did not establish predictive validity or a consistent advantage over simple baselines.**
 
+### [Open the Atlas dashboard →](https://mjnolan37.github.io/vd-cloud/)
+
+Atlas is the browser-based companion to this self-study research project. It turns the measures explored here into a readable TQQQ monitoring view, using QQQ as a return-alignment benchmark. No download or installation is needed to view the hosted dashboard. **It displays a manually regenerated daily-data snapshot, not live quotes.**
+
+
 **Verified execution:** on October 13, 2026 (America/Los_Angeles), the revised code completed on Windows with Python 3.12.1. All 22 tests passed, including the HAC comparison. The market-data run and cached replay matched on all 27 recorded output hashes; missing-data, cloud-span, and split-boundary invariant checks passed. Figures below come from that verified run. Execution success establishes computational consistency, not statistical validity.
 
 
@@ -133,9 +138,17 @@ The country-ETF basket differs from EFA's coverage and weights, includes Canada,
 
 No causal mechanism, strategy backtest, sizing, transaction costs, slippage, or executable entry/exit rules have been validated. Next research should examine several rolling/expanding evaluation periods, HAC lag sensitivity, dependence-aware bootstrap analysis, and incremental baseline effects. Freeze future choices before evaluating a new period.
 
-## Atlas Observatory
+## How Atlas Grew from V&D Cloud
 
-See [`atlas/README.md`](atlas/README.md). The included HTML is a manually regenerated snapshot with latest observation **2026-10-13**. Download [`atlas/index.html`](atlas/index.html) and open locally; the GitHub file-view link does not render a hosted dashboard. Recalculation is manual. Rendered hosting and repository About metadata updates remain separate publishing tasks.
+V&D Cloud began as deliberate self-study: build an Ichimoku-inspired framework on volatility and cross-sectional dispersion, learn the underlying measures, then test whether visually coherent regimes carried stable information about forward returns. The work expanded from QQQ to developed-market country ETFs and a retrospective chronological comparison. Its descriptive structure did not establish predictive validity.
+
+Atlas grew from that process as a lighter monitoring instrument. It carries the learning about realized volatility, normalization, relative state, and careful interpretation into a dashboard that is easier to explore. It focuses on TQQQ, with QQQ as a return-alignment benchmark. Its pairwise correlation distance is distinct from the stock/country cross-sectional dispersion used in the core research; it does not inherit a validated forecasting claim from that work.
+
+**[Open Atlas in your browser →](https://mjnolan37.github.io/vd-cloud/)** · [Dashboard guide and calculations](atlas/README.md)
+
+The current snapshot's latest market observation is **2026-10-13**. GitHub Pages serves the saved HTML; opening the site does not download new market prices. Regenerate the dashboard and publish the updated HTML to refresh it. For offline viewing, download [`atlas/index.html`](atlas/index.html) and open it in a browser. GitHub's file viewer displays repository files; the link above opens the dashboard itself.
+
+Publishing is handled by [the Pages workflow](.github/workflows/publish-atlas.yml), which deploys only the saved dashboard when its HTML changes on `main`. It does not execute the research notebooks or fetch Yahoo data.
 
 ## AI-Assisted Development
 
