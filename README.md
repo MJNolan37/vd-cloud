@@ -3,7 +3,7 @@
 
 A quantitative research project testing whether volatility and cross-sectional dispersion can support an Ichimoku-inspired market-regime framework.
 
-**The revised analysis produced coherent descriptive regimes but did not establish predictive validity or a consistent advantage over simple baselines.**
+**The revised analysis did not establish predictive validity or a consistent advantage over simpler baselines.** See the [canonical evidence table](#verified-revised-results); exploratory threshold crossings are not validated findings.
 
 ### [Open the Atlas dashboard →](https://mjnolan37.github.io/vd-cloud/)
 
