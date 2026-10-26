@@ -1,7 +1,9 @@
 # V&D Cloud
-### Volatility & Dispersion Regime Research
+### Can the Ichimoku cloud's regime logic work on volatility and dispersion instead of price?
 
-A quantitative research project testing whether volatility and cross-sectional dispersion can support an Ichimoku-inspired market-regime framework.
+A personal research project, and a negative result reported in full.
+
+I was fascinated by the Ichimoku cloud and wanted to see whether its regime logic could become a new technical indicator built from volatility and dispersion instead of price. I started with QQQ, then extended the question to developed-market country ETFs, using the project to teach myself different volatility and dispersion measures. I compared the resulting regimes with simple baselines and examined forward returns with permutation diagnostics and HAC/Newey-West tests. The regimes were visually coherent and useful for describing market state, but the revised analysis did not establish predictive validity or a consistent advantage over simpler baselines. Learning to separate a readable picture from a supported conclusion shaped Atlas: a descriptive dashboard for exploring relative market conditions, without forecasting claims.
 
 **The revised analysis did not establish predictive validity or a consistent advantage over simpler baselines.** See the [canonical evidence table](#verified-revised-results); exploratory threshold crossings are not validated findings.
 
@@ -22,6 +24,8 @@ Ichimoku combines price-derived lines into a view of market state. This project 
 It was also a deliberate way to learn realized volatility, cross-sectional dispersion, correlation-distance proxies, and rolling Z-score normalization by building and testing them. Visually coherent regimes are not evidence of a validated predictive signal.
 
 ## Data
+
+Built independently on public market data.
 
 The research window is **2015-01-01 through 2026-05-29**. `config.END_DATE` is `2026-05-30`, an exclusive endpoint.
 
