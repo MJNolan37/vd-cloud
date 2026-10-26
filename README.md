@@ -7,6 +7,16 @@ I was fascinated by the Ichimoku cloud and wanted to see whether its regime logi
 
 **The revised analysis did not establish predictive validity or a consistent advantage over simpler baselines.** See the [canonical evidence table](#verified-revised-results); exploratory threshold crossings are not validated findings.
 
+## My decisions and what you can inspect
+
+I wanted to find out whether replacing price with volatility and cross-sectional dispersion could make Ichimoku-style regime mapping informative about forward returns. Public data, a fixed stock basket, a country-ETF approximation, and an incomplete record of earlier research choices constrained what I could claim.
+
+I chose the measures, normalization, signal mixtures, cloud geometry, and validation design. I tested simple alternatives rather than treating attractive charts as sufficient evidence, and I kept the revised negative conclusion when the checks did not support predictive validity. I also distinguish the later retrospective period from an untouched holdout and report selected-bucket threshold crossings without claiming a multiplicity correction.
+
+The [revised evidence table](#verified-revised-results), [exported summary](results/headline_summary.json), notebooks, and [run manifest](results/run_manifest.json) make the calculations and limitations inspectable. AI assisted implementation, debugging, documentation, and adversarial review; the research design, interpretation, and conclusions are mine.
+
+The open question is whether these measures add information beyond simpler baselines under choices frozen before a new evaluation. This repository does not settle that question. Atlas carries forward the descriptive learning into a monitoring view, without a forecasting claim.
+
 ### [Open the Atlas dashboard →](https://mjnolan37.github.io/vd-cloud/)
 
 Atlas is the browser-based companion to this self-study research project. It turns the measures explored here into a readable TQQQ monitoring view, using QQQ as a return-alignment benchmark. No download or installation is needed to view the hosted dashboard. **It displays a manually regenerated daily-data snapshot, not live quotes.**
